@@ -17,7 +17,7 @@ export const CreateNewRoutes = () => {
     const handleClick = () => {
         const output = { time: Date.now(), value: inputValue }
         base64Data = btoa(JSON.stringify(output))
-        setNewRoute(`${baseUrl}${base64Data}`)
+        setNewRoute(`${baseUrl}clipped/${base64Data}`)
     }
 
     const handleOnChange = (e) => {

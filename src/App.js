@@ -13,7 +13,7 @@ function App() {
             <Route path="/" element={<CreateNewRoutes />} />
 
             <Route element={<ProtectedRoutes />}>
-              <Route path="/:data" element={<ShowData />} />
+              <Route path="/clipped/:data" element={<ShowData />} />
             </Route>
 
           </Routes>

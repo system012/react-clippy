@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 export const ShowData = () => {
     const standardTimer = 60
 
-    const { data } = useParams();
-    const { time, value } = JSON.parse(atob(data));
+    const decodedData = useOutletContext();
+    const { time, value } = JSON.parse(decodedData);
     const [timer, setTimer] = useState(standardTimer)
     const [isActive, setIsActive] = useState(false)
 
@@ -37,10 +37,10 @@ export const ShowData = () => {
         <div>
             {isActive ? <div>
                 <h2>Questo è il dato segreto: {value}</h2>
-                <p>
+                <div>
                     <label>La pagina scadrà in: </label>
                     <h1 className="timer">  {timer}</h1>
-                </p>
+                </div>
             </div>
                 :
                 <div>

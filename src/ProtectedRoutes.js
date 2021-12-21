@@ -4,12 +4,10 @@ export const ProtectedRoutes = () => {
     const { data } = useParams()
     
     try {
-        const isBase64 = atob(data);
-        console.log("The link has base64 data! -> " + isBase64)
-        return <Outlet />
+        const decodedData = atob(data);
+        return <Outlet context={decodedData} />
 
     } catch(e) {
-        console.log("No base64 data provided.")
         if (e.code === 5) {
             return (
             <div>
