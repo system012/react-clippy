@@ -4,8 +4,7 @@ import { useOutletContext } from "react-router-dom";
 export const ShowData = () => {
     const standardTimer = 60
 
-    const decodedData = useOutletContext();
-    const { time, value } = JSON.parse(decodedData);
+    const [time, value] = useOutletContext();
     const [timer, setTimer] = useState(standardTimer)
     const [isActive, setIsActive] = useState(false)
 

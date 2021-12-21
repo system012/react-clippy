@@ -1,20 +1,17 @@
 import { Outlet, useParams } from "react-router-dom";
+import { NotFound } from "./NotFound";
 
 export const ProtectedRoutes = () => {
     const { data } = useParams()
     
     try {
         const decodedData = atob(data);
-        return <Outlet context={decodedData} />
+        const { time, value } = JSON.parse(decodedData)
+        return <Outlet context={[time, value]} />
 
     } catch(e) {
-        if (e.code === 5) {
-            return (
-            <div>
-                <p>Errore. Pagina non trovata.</p>
-                <a href="/">Ritorna alla home.</a>
-            </div>)
+        return (
+            <NotFound />
+        )
         }
     }
-
-}
