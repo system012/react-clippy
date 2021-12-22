@@ -46,7 +46,7 @@ export const ShowData = () => {
                 :
                 <div>
                     <h2>Scaduto!</h2>
-                    <RedirectButton path={"/"} />
+                    <RedirectButton path="/" />
                 </div>}
         </div>
     );
