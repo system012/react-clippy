@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
+import { RedirectButton } from "./RedirectButton";
 
 export const ShowData = () => {
     const standardTimer = 60
@@ -44,7 +45,8 @@ export const ShowData = () => {
             </div>
                 :
                 <div>
-                   <h2>Scaduto!</h2>
+                    <h2>Scaduto!</h2>
+                    <RedirectButton path={"/"} />
                 </div>}
         </div>
     );

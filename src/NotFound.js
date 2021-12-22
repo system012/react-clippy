@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-
-
+import { RedirectButton } from './RedirectButton';
 
 export const NotFound = () => (
   <div>
     <h1>404 - Pagina non trovata!</h1>
-    <Link to="/">Ritorna alla Home</Link>
+    
+    <RedirectButton path="/" />
+  
   </div>
 );
