@@ -34,6 +34,7 @@ export const ShowData = () => {
 
     return (
         <div>
+            <header><h1>Clippy</h1></header>
             {isActive ? <div>
                 <h2>Questo è il dato segreto: {value}</h2>
                 <div>
@@ -43,7 +44,7 @@ export const ShowData = () => {
             </div>
                 :
                 <div>
-                    Scaduto!
+                   <h2>Scaduto!</h2>
                 </div>}
         </div>
     );

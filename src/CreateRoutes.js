@@ -7,7 +7,6 @@ export const CreateNewRoutes = () => {
     const inputElement = useRef()
     const [inputValue, setInputValue] = useState('')
     const [qrURL, setQrURL] = useState()
-    let base64Data = ''
 
     useEffect(() => {
         setQrURL(encodeURI(`https://chart.googleapis.com/chart?cht=qr&chs=250&choe=UTF-8chl=${newRoute}`))
@@ -16,7 +15,7 @@ export const CreateNewRoutes = () => {
 
     const handleClick = () => {
         const output = { time: Date.now(), value: inputValue }
-        base64Data = btoa(JSON.stringify(output))
+        const base64Data = btoa(JSON.stringify(output))
         setNewRoute(`${baseUrl}clipped/${base64Data}`)
     }
 
@@ -26,6 +25,7 @@ export const CreateNewRoutes = () => {
 
     return (
         <div>
+            <header className='welcome'><h1>Welcome to Clippy!</h1></header>
             {newRoute &&
                 <div className='qrcode-center'>
                     <a href={newRoute}>

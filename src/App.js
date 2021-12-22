@@ -8,7 +8,6 @@ import { NotFound } from './NotFound';
 function App() {
   return (
     <main className="App">
-      <header className='welcome'><h1>Welcome to Clippy!</h1></header>
         <Router>
           <Routes>
             <Route exact path="/" element={<CreateNewRoutes />} />
