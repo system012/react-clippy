@@ -1,7 +1,7 @@
 import './App.css';
 import { CreateNewRoutes } from './pages/CreateRoutes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ShowData } from './ShowData';
+import { ShowData } from './pages/ShowData';
 import { ProtectedRoutes } from './middelware/ProtectedRoutes';
 import { NotFound } from './NotFound';
 
