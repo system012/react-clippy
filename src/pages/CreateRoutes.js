@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { QrElement } from '../components/QrElement';
+import { AnimatedBtn } from '../components/AnimatedButton';
+import { motion } from 'framer-motion';
 
 
 export const CreateNewRoutes = () => {
@@ -27,12 +29,21 @@ export const CreateNewRoutes = () => {
         <>
             <header><h1>Welcome to Clippy!</h1></header>
             {newRoute &&
-                <QrElement href={newRoute} imageSrc={qrURL} />
+                <motion.div animate={{
+                                scale: 0.9,
+                                transition: {
+                                    duration: 1,
+                                }
+                    }}>
+
+                    <QrElement href={newRoute} imageSrc={qrURL} />
+
+                </motion.div>
             }
             <p>
-                <label for="data"><strong>Scrivi qualcosa </strong></label>
+                <label htmlFor="data"><strong>Scrivi qualcosa </strong></label>
                 <input onChange={(e) => handleOnChange(e)} type="text" name="data"></input>
-                <button onClick={handleClick}>Submit</button>
+                <AnimatedBtn className="animated-btn" label="Submit" callback={handleClick}/>
             </p>
         </>
     )
