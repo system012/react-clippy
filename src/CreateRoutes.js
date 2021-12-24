@@ -9,7 +9,7 @@ export const CreateNewRoutes = () => {
     const [qrURL, setQrURL] = useState()
 
     useEffect(() => {
-        setQrURL(encodeURI(`https://chart.googleapis.com/chart?cht=qr&chs=250&choe=UTF-8chl=${newRoute}`))
+        setQrURL(encodeURI(`https://chart.googleapis.com/chart?cht=qr&chs=250&chl=${newRoute}`))
 
     }, [newRoute])
 
