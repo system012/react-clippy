@@ -1,8 +1,8 @@
 import './App.css';
-import { CreateNewRoutes } from './CreateRoutes';
+import { CreateNewRoutes } from './pages/CreateRoutes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ShowData } from './ShowData';
-import { ProtectedRoutes } from './ProtectedRoutes';
+import { ProtectedRoutes } from './middelware/ProtectedRoutes';
 import { NotFound } from './NotFound';
 
 function App() {
