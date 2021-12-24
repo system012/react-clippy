@@ -1,5 +1,5 @@
 import { Outlet, useParams } from "react-router-dom";
-import { NotFound } from "./NotFound";
+import { NotFound } from "../pages/NotFound";
 
 const isUrl = (value) => {// se viene fornito un link valido verrà restituito un oggetto contenente isValidUrl (uguale a true) e l'url stesso
 

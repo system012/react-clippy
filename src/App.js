@@ -3,7 +3,7 @@ import { CreateNewRoutes } from './pages/CreateRoutes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ShowData } from './pages/ShowData';
 import { ProtectedRoutes } from './middelware/ProtectedRoutes';
-import { NotFound } from './NotFound';
+import { NotFound } from './pages/NotFound';
 
 function App() {
   return (

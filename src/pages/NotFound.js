@@ -1,4 +1,4 @@
-import { RedirectButton } from './RedirectButton';
+import { RedirectButton } from "../components/RedirectButton";
 
 export const NotFound = () => (
   <div>
