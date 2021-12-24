@@ -1,1 +1,5 @@
 @import url('~simpledotcss/simple.min.css');
+
+.qr {
+    opacity: 1;
+}

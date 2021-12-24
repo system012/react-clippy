@@ -1,10 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './createRoutes.css';
 
 export const CreateNewRoutes = () => {
     const baseUrl = window.location.href
     const [newRoute, setNewRoute] = useState()
-    const inputElement = useRef()
     const [inputValue, setInputValue] = useState('')
     const [qrURL, setQrURL] = useState()
 
@@ -25,19 +24,19 @@ export const CreateNewRoutes = () => {
 
     return (
         <div>
-            <header className='welcome'><h1>Welcome to Clippy!</h1></header>
+            <header><h1>Welcome to Clippy!</h1></header>
             {newRoute &&
-                <div className='qrcode-center'>
+                <div>
                     <a href={newRoute}>
                         <figure>
-                            <img src={qrURL} width="250" height="250" alt="QRCode" />
+                            <img src={qrURL} width="250" height="250" alt="QRCode" className="qr" />
                         </figure>
                     </a>
                 </div>
             }
             <p>
-                <label><b>Scrivi qualcosa </b></label>
-                <input ref={inputElement} onChange={(e) => handleOnChange(e)} type='text' name="data"></input>
+                <label for="data"><strong>Scrivi qualcosa </strong></label>
+                <input onChange={(e) => handleOnChange(e)} type="text" name="data"></input>
                 <button onClick={handleClick}>Submit</button>
             </p>
         </div>
